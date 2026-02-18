@@ -514,10 +514,11 @@
     grid-column: span 1 !important;
   }
   .values-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
     }
+
 
 
 
