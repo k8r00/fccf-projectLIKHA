@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project LIKHA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">Project LIKHA</a>
+  <ul class="nav-links">
+    <li><a href="#who">Who We Are</a></li>
+    <li><a href="#beneficiaries">Beneficiaries</a></li>
+    <li><a href="#whatwedo">What We Do</a></li>
+    <li><a href="#goals">Our Goals</a></li>
+    <li><a href="#ways">Ways to Help</a></li>
+    <li><a href="#ways" class="nav-donate-btn">Donate</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow">FCCF Community · Scholarship Program</div>
+    <h1 class="hero-title">Empowering <span>Young</span> Lives for God's Glory</h1>
+    <p class="hero-verse">"For we are God's handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do." — Eph 2:10</p>
+    <p class="hero-sub">Project LIKHA provides holistic support—financial, spiritual, academic, and personal—to underprivileged yet academically promising youth, empowering them to complete their education and grow as Christ-centered individuals.</p>
+  </div>
+
+  <!-- DONATE CARD -->
+  <div class="donate-card">
+    <h2>Make a Difference Today</h2>
+    <p>Your generosity gives a scholar the freedom to focus on learning.</p>
+
+    <label style="display:block; font-size:0.8rem; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:var(--deep); margin-bottom:0.4rem;">Donation Type</label>
+    <div class="freq-toggle" style="margin-bottom:1rem;">
+      <button class="freq-btn active" id="btnMonetary" onclick="setDonationType('monetary')">Monetary</button>
+      <button class="freq-btn" id="btnInKind" onclick="setDonationType('inkind')">In-Kind</button>
+    </div>
+
+    <div id="monetaryFields">
+      <div class="freq-toggle">
+        <button class="freq-btn active" id="btnMonthly" onclick="setFreq('MONTHLY')">Monthly</button>
+        <button class="freq-btn" id="btnOneTime" onclick="setFreq('ONE-TIME')">One-Time</button>
+      </div>
+      <div class="amount-grid">
+        <button class="amt-btn" onclick="selectAmt(this, '₱X')">₱X</button>
+        <button class="amt-btn" onclick="selectAmt(this, '₱Y')">₱Y</button>
+        <button class="amt-btn" onclick="selectAmt(this, '₱Z')">₱Z</button>
+      </div>
+      <div class="amt-other">
+        <span>₱</span>
+        <input type="number" id="customAmt" placeholder="Enter other amount" oninput="clearSelected()" />
+      </div>
+    </div>
+
+    <div id="inkindFields" style="display:none;">
+      <label style="display:block; font-size:0.8rem; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:var(--deep); margin-bottom:0.4rem;">Item Type</label>
+      <div class="freq-toggle" style="flex-wrap:wrap;">
+        <button class="freq-btn active" id="btnSupplies" onclick="setInKind('School Supplies')">School Supplies</button>
+        <button class="freq-btn" id="btnHousehold" onclick="setInKind('Household Essentials')">Household Essentials</button>
+        <button class="freq-btn" id="btnOthers" onclick="setInKind('Others')">Others</button>
+      </div>
+    </div>
+
+    <button class="donate-submit" style="margin-top:1.5rem;" onclick="openDonateModal()">Donate Now</button>
+  </div>
+</section>
+
+<!-- WHO WE ARE -->
+<section id="who">
+  <div>
+    <div class="section-label">Foundation</div>
+    <h2 class="section-title">Who We Are</h2>
+    <p class="section-body">Project LIKHA is a scholarship and formation program rooted in faith and service, dedicated to nurturing the academic and spiritual growth of underprivileged yet promising youth within the FCCF community.</p>
+    <p class="section-body" style="margin-top:1rem;">We believe that every child is God's handiwork — and that with the right support, they can become servant-leaders who transform their families, their church, and their communities.</p>
+
+    <div class="verse-block">
+      "For we are God's handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do." — Ephesians 2:10
+    </div>
+
+    <div style="margin-top:2rem;">
+      <div class="section-label">Mission</div>
+      <p class="section-body">To provide holistic support—financial, spiritual, academic, and personal—to underprivileged yet academically promising youth within the church, empowering them to complete their education and grow as Christ-centered individuals who will serve their families, church, and communities.</p>
+    </div>
+    <div style="margin-top:1.5rem;">
+      <div class="section-label">Vision</div>
+      <p class="section-body">A transformed generation of educated, faith-driven servant-leaders who break the cycle of poverty, live out Christian values, and actively contribute to the growth of the church and society.</p>
+    </div>
+  </div>
+
+  <div>
+    <div class="section-label">Core Values</div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-letter">L</div>
+        <div class="value-word">Learning</div>
+      </div>
+      <div class="value-card">
+        <div class="value-letter">I</div>
+        <div class="value-word">Integrity</div>
+      </div>
+      <div class="value-card">
+        <div class="value-letter">K</div>
+        <div class="value-word">Knowledge</div>
+      </div>
+      <div class="value-card">
+        <div class="value-letter">H</div>
+        <div class="value-word">Hope</div>
+      </div>
+      <div class="value-card">
+        <div class="value-letter">A</div>
+        <div class="value-word">Achievement</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFICIARIES -->
+<section id="beneficiaries">
+  <div class="section-label">Who We Serve</div>
+  <h2 class="section-title">Our Beneficiaries</h2>
+  <p class="section-body" style="color:rgba(255,255,255,0.65);">We serve underprivileged children and youth from economically disadvantaged families within the communities served by the FCCF Community, including Area 2 of Brgy. Bagong Silangan and students from Silang, Cavite.</p>
+
+  <div class="ben-grid">
+    <div class="ben-card">
+      <div class="ben-icon">📚</div>
+      <h4>Academic Promise</h4>
+      <p>Students who demonstrate strong academic potential and a genuine commitment to learning, regardless of the financial barriers they face.</p>
+    </div>
+    <div class="ben-card">
+      <div class="ben-icon">🙏</div>
+      <h4>Church Participation</h4>
+      <p>Youth who are committed to personal growth and active involvement in church life, reflecting a heart for faith and community.</p>
+    </div>
+    <div class="ben-card">
+      <div class="ben-icon">🏡</div>
+      <h4>Verified Financial Need</h4>
+      <p>Families screened through home visits and barangay certification to ensure support reaches those who need it most.</p>
+    </div>
+    <div class="ben-card">
+      <div class="ben-icon">👨‍👩‍👧</div>
+      <h4>Secondary Beneficiaries</h4>
+      <p>Families of scholars who receive spiritual and social support, and the broader church community which gains future leaders and volunteers.</p>
+    </div>
+  </div>
+
+  <div class="ben-priorities">
+    <h4>Priority is Given To:</h4>
+    <div class="priority-tags">
+      <span class="tag">Unemployed or Underemployed Households</span>
+      <span class="tag">Orphans or Solo-Parent Families</span>
+      <span class="tag">Students with Disabilities or Chronic Illness</span>
+      <span class="tag">Victims of Disaster, Abuse, or Neglect</span>
+      <span class="tag">Disadvantaged or Indigenous Communities</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section id="whatwedo">
+  <div class="section-label">Our Programs</div>
+  <h2 class="section-title">What We Do</h2>
+  <p class="section-body">Project LIKHA goes beyond financial aid — we walk alongside our scholars in every dimension of their growth.</p>
+
+  <div class="programs-list">
+    <div class="program-card">
+      <div class="prog-num">01</div>
+      <h4>Scholarship Assistance</h4>
+      <p>Financial assistance for tuition and school-related expenses, awarded based on financial need, academic potential, and church involvement.</p>
+    </div>
+    <div class="program-card">
+      <div class="prog-num">02</div>
+      <h4>Spiritual Mentorship & Discipleship</h4>
+      <p>Regular mentoring through assigned Life Group Leaders, Bible studies, character formation, and discipleship activities.</p>
+    </div>
+    <div class="program-card">
+      <div class="prog-num">03</div>
+      <h4>Academic & Life Skills Development</h4>
+      <p>Tutoring, study support, career guidance, and workshops on communication, time management, financial literacy, and personal development.</p>
+    </div>
+    <div class="program-card">
+      <div class="prog-num">04</div>
+      <h4>Community Service & Ministry</h4>
+      <p>Required participation in church-led service projects such as Sunday school teaching, youth outreach, tutoring, and community missions.</p>
+    </div>
+    <div class="program-card">
+      <div class="prog-num">05</div>
+      <h4>Monitoring & Pastoral Care</h4>
+      <p>Semi-annual reviews of academic progress, spiritual growth, and community involvement, with counseling and intervention when needed.</p>
+    </div>
+    <div class="program-card">
+      <div class="prog-num">06</div>
+      <h4>Sustainable Donor Partnership</h4>
+      <p>Church-based scholarship fund supported by donors, partner organizations, local businesses, fundraising events, and the Adopt-a-Scholar program.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GOALS -->
+<section id="goals">
+  <div class="section-label">Our Purpose</div>
+  <h2 class="section-title">Our Goals</h2>
+  <p class="section-body">Every decision we make is guided by these five commitments to our scholars and to God.</p>
+
+  <div class="goals-grid">
+    <div class="goal-card">
+      <div class="goal-num">1</div>
+      <div>
+        <h4>Increase Access to Education</h4>
+        <p>Enable economically disadvantaged children and youth to pursue and complete elementary, secondary, post-secondary, and tertiary education.</p>
+      </div>
+    </div>
+    <div class="goal-card">
+      <div class="goal-num">2</div>
+      <div>
+        <h4>Promote Holistic Development</h4>
+        <p>Nurture scholars spiritually, emotionally, and socially through mentorship, discipleship, and life skills formation.</p>
+      </div>
+    </div>
+    <div class="goal-card">
+      <div class="goal-num">3</div>
+      <div>
+        <h4>Develop Christ-Centered Leaders</h4>
+        <p>Equip scholars to become responsible, service-oriented leaders grounded in biblical values.</p>
+      </div>
+    </div>
+    <div class="goal-card">
+      <div class="goal-num">4</div>
+      <div>
+        <h4>Strengthen Church Engagement</h4>
+        <p>Encourage active participation of scholars and their families in church life and ministries.</p>
+      </div>
+    </div>
+    <div class="goal-card" style="grid-column: span 2;">
+      <div class="goal-num">5</div>
+      <div>
+        <h4>Ensure Accountability & Sustainability</h4>
+        <p>Maintain transparent governance, regular evaluation, and sustainable funding through partnerships and stewardship.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAYS TO HELP -->
+<section id="ways">
+  <div class="section-label">Get Involved</div>
+  <h2 class="section-title">Ways to Help</h2>
+  <p class="section-body" style="color:rgba(255,255,255,0.65);">Whether through prayer, finances, or your time — your contribution changes a scholar's story.</p>
+
+  <div class="ways-grid">
+    <div class="way-card">
+      <h3>Adopt a Scholar</h3>
+      <p>The Adopt a Scholar Program connects you directly with a student's educational journey through meaningful monthly support. Your recurring commitment provides consistent, reliable funding that Project LIKHA scholars can count on throughout their academic year.</p>
+      <p style="margin-top:-0.5rem;">Beyond your core monthly contribution, you can choose to give additional support for birthday celebrations, school supplies, nutritious meals, or emergency assistance. Your steady presence shows them that someone believes in their future, month after month.</p>
+      <button class="way-btn" onclick="openAdoptModal()">Adopt a Scholar</button>
+    </div>
+    <div class="way-card">
+      <h3>Donate Now</h3>
+      <p>Your donation empowers Project LIKHA scholars to pursue their dreams without the weight of financial worry. By supporting their education, you're not just helping them stay in school — you're giving them the freedom to excel, the confidence to reach their potential, and the foundation to build brighter futures for themselves and their communities.</p>
+      <button class="way-btn primary" onclick="document.getElementById('hero').scrollIntoView({behavior:'smooth'})">Give a Donation</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Project LIKHA</div>
+  <div class="footer-verse">"For we are God's handiwork, created in Christ Jesus to do good works." — Eph 2:10</div>
+  <div class="footer-contact">
+    FCCF Community<br>
+    <a href="mailto:fccf10gandhi@gmail.com">fccf10gandhi@gmail.com</a>
+  </div>
+</footer>
+
+<!-- DONATE MODAL -->
+<div class="modal-overlay" id="donateModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('donateModal')">×</button>
+    <div id="donateForm">
+      <h3>Complete Your Pledge</h3>
+      <p>Fill in your details and we'll reach out to coordinate your donation.</p>
+      <label>Full Name</label>
+      <input type="text" id="donateName" placeholder="Your name" />
+      <label>Email Address</label>
+      <input type="email" id="donateEmail" placeholder="your@email.com" />
+      <label>Phone Number (optional)</label>
+      <input type="tel" id="donatePhone" placeholder="+63 9XX XXX XXXX" />
+      <label>City, Province</label>
+      <input type="text" id="donateCity" placeholder="e.g. Quezon City, Metro Manila" />
+      <label>Message (optional)</label>
+      <textarea id="donateMessage" placeholder="Any notes for the team..."></textarea>
+      <button class="modal-submit" onclick="submitDonate()">Send My Pledge</button>
+    </div>
+    <div class="modal-success" id="donateSuccess">
+      <div class="check">🙏</div>
+      <h3>Thank You!</h3>
+      <p>Your pledge has been sent to our team at <strong>fccf10gandhi@gmail.com</strong>. We'll reach out to you shortly to coordinate your donation.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ADOPT MODAL -->
+<div class="modal-overlay" id="adoptModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('adoptModal')">×</button>
+    <div id="adoptForm">
+      <h3>Adopt a Scholar</h3>
+      <p>We'll connect you with a scholar's journey. Please share your details and our team will get in touch.</p>
+      <label>Full Name</label>
+      <input type="text" id="adoptName" placeholder="Your name" />
+      <label>Email Address</label>
+      <input type="email" id="adoptEmail" placeholder="your@email.com" />
+      <label>Phone Number</label>
+      <input type="tel" id="adoptPhone" placeholder="+63 9XX XXX XXXX" />
+      <label>City, Province</label>
+      <input type="text" id="adoptCity" placeholder="e.g. Quezon City, Metro Manila" />
+
+      <label>Type of Commitment</label>
+      <div class="freq-toggle" style="flex-wrap:wrap;">
+        <button class="freq-btn active" id="btn3mo" onclick="setCommitment('3 Months')">3 Months</button>
+        <button class="freq-btn" id="btn6mo" onclick="setCommitment('6 Months')">6 Months</button>
+        <button class="freq-btn" id="btn9mo" onclick="setCommitment('9 Months')">9 Months</button>
+        <button class="freq-btn" id="btn1yr" onclick="setCommitment('1 Year')">1 Year</button>
+      </div>
+
+      <label style="margin-top:1rem; display:block;">Message (optional)</label>
+      <textarea id="adoptMessage" placeholder="Anything you'd like us to know..."></textarea>
+      <button class="modal-submit" onclick="submitAdopt()">Send My Interest</button>
+    </div>
+    <div class="modal-success" id="adoptSuccess">
+      <div class="check">✨</div>
+      <h3>We received your interest!</h3>
+      <p>Our team at <strong>fccf10gandhi@gmail.com</strong> will be in touch soon to introduce you to the program.</p>
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
