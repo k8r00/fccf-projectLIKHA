@@ -83,7 +83,7 @@
     const body = encodeURIComponent(
       `Hello Project LIKHA Team,\n\nA new donation pledge has been submitted.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone || 'N/A'}\nCity, Province: ${city || 'N/A'}\nDonation Type: ${selectedDonationType === 'monetary' ? 'Monetary' : 'In-Kind'}\n${donationDetail}\nMessage: ${msg || 'None'}\n\nPlease reach out to coordinate their donation.\n\nThank you!`
     );
-    window.location.href = `mailto:fccf10gandhi@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:likha.donations@gmail.com?subject=${subject}&body=${body}`;
     document.getElementById('donateForm').style.display = 'none';
     document.getElementById('donateSuccess').style.display = 'block';
   }
@@ -99,7 +99,8 @@
     const body = encodeURIComponent(
       `Hello Project LIKHA Team,\n\nSomeone has expressed interest in the Adopt-a-Scholar Program.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone || 'N/A'}\nCity, Province: ${city || 'N/A'}\nCommitment: ${selectedCommitment}\nMessage: ${msg || 'None'}\n\nPlease reach out to them.\n\nThank you!`
     );
-    window.location.href = `mailto:fccf10gandhi@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:likha.donations@gmail.com?subject=${subject}&body=${body}`;
     document.getElementById('adoptForm').style.display = 'none';
     document.getElementById('adoptSuccess').style.display = 'block';
   }
+
