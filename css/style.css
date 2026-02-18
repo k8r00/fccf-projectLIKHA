@@ -409,7 +409,7 @@
 
     /* Footer */
     footer {
-      background: #080D1A;
+      background: var(--cream);
       padding: 3rem 5%;
       display: flex; align-items: center; justify-content: space-between;
       flex-wrap: wrap; gap: 1rem;
@@ -421,7 +421,7 @@
     }
     .footer-verse {
       font-size: 0.8rem; font-style: italic;
-      color: rgba(255,255,255,0.35); max-width: 400px; text-align: center;
+      color: var(--deep2); max-width: 400px; text-align: center;
     }
     .footer-contact { font-size: 0.8rem; color: rgba(255,255,255,0.4); text-align: right; }
     .footer-contact a { color: var(--gold); text-decoration: none; }
@@ -444,3 +444,4 @@
         gap: 1rem;
         }
     }
+
