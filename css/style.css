@@ -378,7 +378,7 @@
 
     /* Ways to Help */
     #ways {
-      background: var(--deep2);
+      background: var(--deep);
       color: var(--white);
     }
     #ways .section-title { color: var(--white); }
@@ -417,14 +417,14 @@
     }
     .footer-logo {
       font-family: 'Playfair Display', serif;
-      font-size: 1.2rem; font-weight: 900; color: var(--gold);
+      font-size: 1.2rem; font-weight: 900; color: var(--deep);
     }
     .footer-verse {
       font-size: 0.8rem; font-style: italic;
       color: var(--deep2); max-width: 400px; text-align: center;
     }
-    .footer-contact { font-size: 0.8rem; color: rgba(255,255,255,0.4); text-align: right; }
-    .footer-contact a { color: var(--gold); text-decoration: none; }
+    .footer-contact { font-size: 0.8rem; color: var(--deep2); text-align: right; }
+    .footer-contact a { color: var(--deep); text-decoration: none; }
 
     /* Animations */
     @keyframes fadeUp {
@@ -444,4 +444,5 @@
         gap: 1rem;
         }
     }
+
 
